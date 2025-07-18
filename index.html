@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TribeHub – Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #5A67D8;
+      --text-dark: #2D3748;
+      --text-medium: #4A5568;
+      --overlay: rgba(255, 255, 255, 0.85);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: url('background.webp') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(1.2px);
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      background: var(--overlay);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      padding: 2rem 1.5rem;
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      line-height: 1.3;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      color: var(--text-medium);
+      margin-bottom: 1.5rem;
+    }
+
+    .intro {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      color: var(--text-dark);
+    }
+
+    .features {
+      text-align: left;
+      margin: 2rem 0;
+    }
+
+    .features h2 {
+      color: var(--primary);
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .features ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .features li {
+      margin-bottom: 0.75rem;
+      padding-left: 1.6rem;
+      position: relative;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+    }
+
+    .features li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    .cta {
+      margin-top: 2rem;
+    }
+
+    .join-button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      background-color: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .join-button:hover {
+      background-color: #434190;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (min-width: 768px) {
+      body {
+        padding: 4rem 2rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .tagline {
+        font-size: 1.2rem;
+      }
+
+      .intro {
+        font-size: 1.05rem;
+      }
+
+      .features h2 {
+        font-size: 1.3rem;
+      }
+
+      .features li {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>Run Your Organisation. Engage Your Tribe. All in One Place.</h1>
+    <p class="tagline">TribeHub is your command center for thriving communities — built for growth, built for you.</p>
+
+    <p class="intro">
+      TribeHub is the all-in-one platform built for <strong>organisations, associations, and community groups</strong>. 
+      Manage memberships, collect dues, plan events, and keep your people engaged—without the chaos of juggling multiple tools.
+    </p>
+
+    <section class="features">
+      <h2>What You Can Do With TribeHub</h2>
+      <ul>
+        <li>Centralized Membership Management</li>
+        <li>Automated Dues Collection & Tracking</li>
+        <li>Event Scheduling & Smart Reminders</li>
+        <li>Insights with Actionable Reporting</li>
+        <li>Targeted Communications</li>
+      </ul>
+    </section>
+
+    <div class="cta">
+      <a href="https://forms.gle/oMPr1jGNhtuYXd7A7" class="join-button">Join the Waitlist</a>
+    </div>
+  </main>
+</body>
+</html>
